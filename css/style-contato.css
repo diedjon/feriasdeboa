@@ -1,0 +1,347 @@
+/* RESET PADRAO SITE */
+* {
+    font-family: 'Open Sans', sans-serif;;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+a { text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover {opacity: 1;}
+nav,ul {list-style: none;}
+
+/* NAVBAR MENU */
+.navbar-top {
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    background: #ff9e40;
+    color: white;
+    flex: wrap;
+}
+.navbar-top a, .navabar-top p {
+    margin: 10px 10px 10px 10px;
+}
+.navbar-top a {
+    color: white;
+}
+
+@media (max-width: 600px){
+    .navbar-top {
+        flex-direction: column;
+        line-height: 1;
+        justify-content: center;
+        text-align: center;
+        font-size:0.9rem;
+        padding: 10px;
+    }
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px; 
+}
+header img { width: 200px; }
+header nav { display: flex; }
+header li a { color: #191c03; font-weight: 600; }
+header li { margin: 0 20px;}
+header li:first-child{margin-left: 0px; }
+header li:last-child{margin-right: 0px;}
+
+#contato{
+    border-radius: 5px;
+    background-color: #ff6d00;
+    padding: 5px;
+    color: white;
+ }
+
+/* BREAKPOINT do HEADER */
+
+@media (max-width: 700px) {
+    header{flex-direction: column; padding: 20px 0px;} 
+    header img {margin-bottom: 15px;}
+    header li {margin: 0 10px;}
+}
+
+.breadcumbs-contato{ 
+    background-image: url(../img/banner-contato.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.breadcumbs-contato h1{
+    color: #fff;
+    font-size: 2.0rem;
+}
+.breadcumbs-contato h3 {
+    color: #fff;
+    font-size:1.0rem;
+    font-weight: 400;
+}
+
+
+/*
+*
+*
+CONTEUDO PADRAO ACIMA
+*
+*/
+
+/* */
+.subtitulo-roteiro {
+    text-align: center;
+    border-bottom: 3px solid black;
+    width: 20%;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 1.10rem;
+}
+.contato p  {
+    text-align: center;
+    margin-top:5px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+}
+
+fieldset{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    margin: auto;
+    width: 50%;
+    background-image: linear-gradient(45deg, rgba(182, 178, 178, 0.7) 70%, transparent), url(../img/hero.jpg);
+    background-size: cover;
+    border-radius: 5%;
+}
+section form {
+    padding:5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "nome sobrenome"
+      "email telefone"
+      "area area"
+      "Enviar Enviar";
+    grid-gap: 0.5rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    color: rgb(252, 252, 252);
+    text-shadow: 1px 1px 2px black;
+    }
+  
+  section form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  section form .nome {
+    grid-area: nome;
+  }
+  
+  section form .sobrenome {
+    grid-area: sobrenome;
+  }
+  
+  section form .email {
+    grid-area: email;
+  }
+  
+  section form .telefone {
+    grid-area: telefone;
+  }
+  
+  section form .area {
+    grid-area: area;
+  }
+  section form .Enviar {
+    grid-area: Enviar;
+  }
+ section form label {
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+    font-size: 1.3rem;
+  }
+  section form input {
+    outline: none;
+    height: 1.5rem;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    text-align: center;
+  }
+  section form textarea {
+    outline: none;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    text-align: center;
+  }
+ section input.submit{
+    background-color: orangered;
+    font-weight: bold;
+    color:white;
+    margin-top: 15px;
+    width: 200px;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+ }
+ section input.submit:hover{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+ }
+
+
+/* FORM RESPONSIVO */
+@media (max-width: 1000px){
+    section form {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        text-align: center;
+    }
+}
+/*INFORMACOES DE CONTATO*/
+
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr ;
+    grid-gap: 15px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #ff6d00;
+    padding: 20px 0px 50px 0px;
+
+}
+.grid-linha {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-bottom: 40px;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.informacoes h3  {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+}
+.informacoes i {
+    font-size: 2.5rem;
+    color: white;
+    padding: 5px
+}
+.informacoes p,a{
+    color: white;
+}
+/*RESPONSIVO INFORMACOES */
+@media (max-width: 600px){
+    .informacoes{
+        grid-template-columns: 1fr;
+    }
+    .informacoes h3 {
+        padding-top: 25px;
+    }
+    .grid-linha {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        width: 35%;
+    }
+    /* TITULO DO "ENTRE EM CONTATO" */
+    .subtitulo-roteiro{
+        width: 35%;
+    }
+}
+
+
+
+/* 
+*
+CONTEUDO PADRAO ABAIXO
+*
+*/
+
+/* MAPA */
+.mapa h2 {
+    text-align: center;
+    padding:10px;
+    font-size: 1.2rem;
+    margin: 0px auto;
+}
+.mapa iframe {
+    margin-top:20px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+}
+footer ul li {
+    margin-right: 10px;
+}
+footer ul li:last-child{
+    margin-right: 0px;
+}
+footer ul li a {
+    color: #ff6d00;
+    font-size: 2rem;
+}
+footer p {
+    color: #fff;
+    font-weight: 800;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row!important;
+    padding: 10px;
+   
+}
+.menu-footer li a { color: #fff; }
+.menu-footer li {margin: 10px;}
+.menu-footer li:first-child{margin-left: 0px;}
+.menu-footer li:last-child{margin-right: 0px;}
+
+.final-footer {
+    background-color: #0C0C0C;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    width: 100%;
+}
+.final-footer p{
+    font-size: 10pt;
+    color: white;
+}
+@media (max-width: 600px){
+    .final-footer {
+        flex-direction: column;
+        padding: 4px;
+    }
+}

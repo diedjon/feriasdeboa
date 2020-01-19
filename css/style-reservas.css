@@ -1,0 +1,320 @@
+/* RESET PADRAO SITE */
+* {
+    font-family: 'Open Sans', sans-serif;;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+a { text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover {opacity: 1;}
+nav,ul {list-style: none;}
+
+/* NAVBAR MENU */
+.navbar-top {
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    background: #ff9e40;
+    color: white;
+    flex: wrap;
+}
+.navbar-top a, .navabar-top p {
+    margin: 10px 10px 10px 10px;
+}
+.navbar-top a {
+    color: white;
+}
+
+@media (max-width: 600px){
+    .navbar-top {
+        flex-direction: column;
+        line-height: 1;
+        justify-content: center;
+        text-align: center;
+        font-size:0.9rem;
+        padding: 10px;
+    }
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px; 
+}
+header img { width: 200px; }
+header nav { display: flex; }
+header li a { color: #191c03; font-weight: 600; }
+header li { margin: 0 20px;}
+header li:first-child{margin-left: 0px; }
+header li:last-child{margin-right: 0px;}
+
+#reservas{
+    border-radius: 5px;
+    background-color: #ff6d00;
+    padding: 5px;
+    color: white;
+ }
+
+/* BREAKPOINT do HEADER */
+
+@media (max-width: 700px) {
+    header{flex-direction: column; padding: 20px 0px;} 
+    header img {margin-bottom: 15px;}
+    header li {margin: 0 10px;}
+}
+
+.breadcumbs-reservas{ 
+    background-image: url(../img/reservas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.breadcumbs-reservas h1{
+    color: #fff;
+    font-size: 2.0rem;
+}
+.breadcumbs-reservas h3 {
+    color: #fff;
+    font-size:1.0rem;
+    font-weight: 400;
+}
+
+
+/*
+*
+*
+*/
+
+/*FORM*/
+fieldset{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    margin: auto;
+    width: 50%;
+    background-image: linear-gradient(45deg, rgba(182, 178, 178, 0.7) 70%, transparent), url(../img/sobre-empresa.jpg);
+    background-size: cover;
+    border-radius: 5%;
+}
+
+section form {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "pesquisa pesquisa"
+    "data-ida data-volta"
+    "local-ida local-volta"
+    "pesquisar pesquisar";
+  grid-gap: 2rem;
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  color: rgb(252, 252, 252);
+  text-shadow: 1px 1px 2px black;
+  }
+
+section form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+section form .pesquisa {
+  grid-area: pesquisa;
+}
+
+section form .data-ida {
+  grid-area: data-ida;
+}
+
+section form .data-volta {
+  grid-area: data-volta;
+}
+
+section form .local-ida {
+  grid-area: local-ida;
+}
+
+section form .local-volta {
+  grid-area: local-volta;
+}
+section form .pesquisar {
+  grid-area: pesquisar;
+}
+
+  
+ section form label {
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+    font-size: 1.3rem;
+  }
+  
+  section form input {
+    outline: none;
+    height: 1.5rem;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    text-align: center;
+    
+  }
+  section form textarea {
+    outline: none;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    text-align: center;
+  }
+ section input.submit{
+    background-color: orangered;
+    font-weight: bold;
+    color:white;
+    width: 200px;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+ }
+ section input.submit:hover{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+ }
+
+ /* FORM RESPONSIVO */
+ @media (max-width: 700px){
+    section form {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        text-align: center;
+    }
+    section input.submit {
+        margin-top: 15px;
+    }
+}
+
+
+/* LOCAIS MAIS PROCURADOS */
+.titulo-roteiro {
+    text-align: center;
+    background-color: #ff6d00;
+    width: 30%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 0 8px;
+    color: white;
+    font-size: 1.30rem;
+    box-shadow: 10px 0px 17px -6px rgba(0,0,0,0.75);
+}
+
+.reservas-locais{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    padding: 20px;
+}
+.reservas-locais img {
+    border: 1px solid gray;
+    box-shadow: 10px 0px 17px -6px rgba(0,0,0,0.75);
+    padding: 2px;
+}
+
+.reservas-locais img:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
+
+/* FOTOS RESPONSIVE do GRID */
+
+@media (max-width: 1000px){
+    .reservas-locais {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+@media (max-width: 600px){
+    .reservas-locais {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/*
+*
+*
+*/
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+}
+footer ul li {
+    margin-right: 10px;
+}
+footer ul li:last-child{
+    margin-right: 0px;
+}
+footer ul li a {
+    color: #ff6d00;
+    font-size: 2rem;
+}
+footer p {
+    color: #fff;
+    font-weight: 800;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row!important;
+    padding: 10px;
+   
+}
+.menu-footer li a { color: #fff; }
+.menu-footer li {margin: 10px;}
+.menu-footer li:first-child{margin-left: 0px;}
+.menu-footer li:last-child{margin-right: 0px;}
+
+.final-footer {
+    background-color: #0C0C0C;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    width: 100%;
+}
+.final-footer p{
+    font-size: 10pt;
+    color: white;
+}
+@media (max-width: 600px){
+    .final-footer {
+        flex-direction: column;
+        padding: 4px;
+    }
+}

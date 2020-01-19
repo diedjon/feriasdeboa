@@ -1,0 +1,489 @@
+/* RESET PADRAO SITE */
+* {
+    font-family: 'Open Sans', sans-serif;;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+a { text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover {opacity: 1;}
+nav,ul {list-style: none;}
+
+/* NAVBAR MENU */
+.navbar-top {
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    background: #ff9e40;
+    color: white;
+    flex: wrap;
+}
+.navbar-top a, .navabar-top p {
+    margin: 10px 10px 10px 10px;
+}
+.navbar-top a {
+    color: white;
+}
+
+@media (max-width: 600px){
+    .navbar-top {
+        flex-direction: column;
+        line-height: 1;
+        justify-content: center;
+        text-align: center;
+        font-size:0.9rem;
+        padding: 10px;
+    }
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px; 
+}
+header img { width: 200px; }
+header nav { display: flex; }
+header li a { color: #191c03; font-weight: 600; }
+header li { margin: 0 20px;}
+header li:first-child{margin-left: 0px; }
+header li:last-child{margin-right: 0px;}
+
+#home{
+    border-radius: 5px;
+    background-color: #ff6d00;
+    padding: 5px;
+    color: white;
+ }
+
+/* BREAKPOINT do HEADER */
+
+@media (max-width: 700px) {
+    header{flex-direction: column; padding: 20px 0px;} 
+    header img {margin-bottom: 15px;}
+    header li {margin: 0 10px;}
+}
+
+/* BANNER INICIAL */
+
+.banner {
+    background-image: url(../img/banner-inicial.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.banner h1{
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+
+    /* ANIMACAO*/
+    animation: titulo1 2s;
+}
+.banner h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+
+    /* ANIMACAO*/
+    animation: titulo3 2s;
+}
+.banner .btn {
+    background-color: #fff;
+    border-radius: 4px;
+    color: #191c03;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    /* ANIMACAO*/
+    animation: titulo-botao 2s;
+}
+
+/* ANIMACAO DO BANNER */
+  @keyframes titulo1{
+    from{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes titulo3{
+    from{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes titulo-botao{
+    from{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+
+
+/*BREAKPOINT do BANNER */
+@media (max-width: 700px){
+    .banner h1{ font-size: 2.2rem; padding: 0 10px}
+    .banner h3{ font-size: 1.4rem;}
+}
+
+/* SECTION - ROTEIRO */
+.titulo-roteiro {
+    text-align: center;
+    background-color: #ff6d00;
+    width: 30%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 0 8px;
+    color: white;
+    font-size: 1.30rem;
+    box-shadow: 10px 0px 17px -6px rgba(0,0,0,0.75);
+
+}
+.subtitulo-roteiro {
+    text-align: center;
+    border-bottom: 3px solid black;
+    width: 20%;
+    padding:10px;
+    margin: 10px auto;
+    font-size: 1.10rem;
+}
+
+/* CENTRALIZANDO IMAGENS dos ROTEIROS */
+
+.roteiro {
+    width:100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    text-align: center;
+}
+.roteiro img{
+    border: 1px solid gray;
+    box-shadow: 10px 0px 17px -6px rgba(0,0,0,0.75);
+    padding: 2px;
+    width: 400px;
+ 
+}
+.roteiro img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    
+    animation: roteiro-imagem 2s;
+  }
+/* ANIMACAO DA IMAGEM ROTEIRO */
+
+@keyframes roteiro-imagem{
+    0%{
+      transform:scale(1.0);
+    }
+    50%{
+      transform:scale(1.2);
+    }
+    100%{
+      transform:scale(1.0);
+    }
+  }
+
+
+
+
+.roteiro-item {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+.roteiro-item h5 {
+    font-weight: bold;
+}
+.roteiro-item p {
+    font-size: 0.80em;
+}
+
+/*BREAKPOINT do ROTEIRO */
+@media (max-width: 700px){
+    .titulo-roteiro {
+        width: 50%;
+        font-size: 1.10rem;
+    }
+    .subtitulo-roteiro{
+        width: 40%;
+        font-size: 1.0rem;
+    }  
+}
+
+@media (max-width: 500px){
+.roteiro img {
+    max-width: 355px;
+    }
+}
+
+/* DETALHES da AGENCIA VIAGENS */
+
+.detalhes {
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+.detalhes h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+.detalhes p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+.detalhes hr {
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 70px;
+    border: none;
+}
+
+/* ALINHANDO e CENTRALIZANDO COM GRID e FLEXBOX */
+
+.detalhes .grid {
+    width: 100%; display: flex;
+}
+.detalhes .grid li {
+    padding: 0 15px;
+    text-align: center;
+}
+.detalhes .grid li i {
+    color: #ff6d00;
+    font-size: 50px;
+    margin-bottom: 30px;
+
+    
+}
+
+.detalhes .grid li i:hover {
+    animation: rotacao-icon 2s;
+}
+/* ANIMACAO ICONE */
+@keyframes rotacao-icon{
+    0%{
+      transform:rotate(180deg);
+    }
+    
+    50%{
+      transform:rotate(90deg)
+    }
+    100%{
+      transform:rotate(0deg);
+    }
+  }
+
+.detalhes .grid li h4 {
+    font-size: 1.5em;
+    color: #ff6d00;
+    margin-bottom: 30px;
+}
+.detalhes .grid p {color: #fff;}
+
+@media (max-width: 700px){
+    .detalhes .grid {
+        flex-direction: column;
+    }
+}
+/* CONTATO + INFORMACOES */
+
+.viagem-contato {
+    background-image: url(../img/banner-contato.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 30px;
+}
+
+.viagem-contato h3{
+    font-size: 1.50rem;
+    margin-bottom: 15px;
+    color: #fff; 
+}
+.viagem-contato p {
+    font-size: 1.20rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.viagem-contato .btn {
+    background-color: #fff;
+    border-radius: 4px;
+    color: #191c03;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* REDES SOCIAIS */
+
+.newsletter-social {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    align-items: center;
+   
+    
+}
+.redes-sociais h1 {
+    font-size: 1.70rem;
+    color: #7c7c7c;
+    padding: 10px 0px;
+}
+.redes-sociais i{
+    font-size: 3.50rem;
+    color: #0a0a0a;
+    text-align: center;
+    padding: 0 2px;
+}
+
+/* FORMULARIO DO NEWSLETTER */
+
+.newsletter-form {
+    /*flex: 2 1 260px;*/
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.newsletter-form p {
+    font-size: 1.25em;
+    font-style: italic;
+    color: #7c7c7c;
+    text-align: center;
+}
+.newsletter-form input {
+    /*flex: 3 1 200px;*/
+    font-size: 1.25em;
+    color: #7c7c7c;
+    border: 4px solid #ff6d00;
+    background: transparent; 
+    padding: 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+.newsletter-form button{
+    /* flex: 1 1 200px;*/
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ff6d00;
+    color: white;
+    margin: 0px;
+    cursor: pointer; 
+    border: 0px;
+}
+/* BREAKPOINT DO FORM e REDES SOCIAIS */
+@media (max-width: 600px){
+    .newsletter-social {
+        flex-direction: column; 
+        margin-bottom: 20px;
+    }
+    .newsletter-form{
+        margin: 40px 0px;
+    }
+}
+
+/* MAPA */
+.mapa h2 {
+    text-align: center;
+    padding:10px;
+    font-size: 1.2rem;
+    margin: 0px auto;
+}
+.mapa iframe {
+    margin-top:20px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+}
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+}
+footer ul li {
+    margin-right: 10px;
+}
+footer ul li:last-child{
+    margin-right: 0px;
+}
+footer ul li a {
+    color: #ff6d00;
+    font-size: 2rem;
+}
+footer p {
+    color: #fff;
+    font-weight: 800;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row!important;
+    padding: 10px;
+   
+}
+.menu-footer li a { color: #fff; }
+.menu-footer li {margin: 10px;}
+.menu-footer li:first-child{margin-left: 0px;}
+.menu-footer li:last-child{margin-right: 0px;}
+
+.final-footer {
+    background-color: #0C0C0C;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    width: 100%;
+}
+.final-footer p{
+    font-size: 10pt;
+    color: white;
+}
+@media (max-width: 600px){
+    .final-footer {
+        flex-direction: column;
+        padding: 4px;
+    }
+}
+
